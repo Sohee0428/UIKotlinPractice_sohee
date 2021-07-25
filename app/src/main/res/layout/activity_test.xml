@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    tools:context=".Test">
+
+    <TextView
+        android:id="@+id/viewTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="보여줄 문구"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
+    <EditText
+        android:id="@+id/contentEdt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="입력할 문장"
+        app:layout_constraintTop_toBottomOf="@id/viewTxt"/>
+
+    <TextView
+        android:id="@+id/outputTxt"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:text="입력한 내용이 나오는 곳"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/inputBtn"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <Button
+        android:id="@+id/inputBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="문장 변경"
+        app:layout_constraintTop_toBottomOf="@id/contentEdt"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
